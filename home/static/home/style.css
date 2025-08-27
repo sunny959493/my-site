@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+form button:hover {
+    background: #555;
+}
+
+/* Thank you message */
+.success-message {
+    background: #e0f7e9;
+    border: 1px solid #8bc34a;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+}

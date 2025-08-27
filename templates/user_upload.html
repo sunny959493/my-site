@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'user_upload' %}">Upload a Post</a>
+            <a href="{% url 'uploads' %}">All Uploads</a>
+            <a href="{% url 'fav' %}">My favourites</a>
+            <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+    </header><br>
+    <div>
+        <form action="user_upload" method="POST" enctype="multipart/form-data">
+            {% csrf_token%}
+            <input type="text" name="place" placeholder="place">
+            <input type="file" name="image" placeholder="image">
+            <input type="text" name="description" placeholder="description">
+            <input type="submit">
+        </form>
+        <div>
+            {% for message in messages %}
+            <h3>{{message}}</h3>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
